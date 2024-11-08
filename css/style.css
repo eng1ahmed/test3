@@ -21,6 +21,12 @@ body {
     justify-content: center;
     background-color: var(--bg-body);
 }
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    
+}
 .container section
 {
 display: flex;
