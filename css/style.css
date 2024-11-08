@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    text-transform: capitalize;
+}
+:root {
+    --border-radius: 8px;
+    --bg-color: #fff;
+    --bg-body: hsl(30, 38%, 92%);
+    --btn-color: hsl(158, 36%, 37%);
+    --text-color: #9b9191;
+    --font-size: 2rem;
+    --timming: 0.3s;
+}
+body {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-body);
+}
+.container section
+{
+display: flex;
+    max-width: 80vh;
+    max-height: 50vh;
+    height: auto;
+    background-color: var(--bg-color);
+}
+img{
+    width: 251px;
+height: 100%;
+}
+.price{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}
+.price del {
+    margin-left: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+.info h4{
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 700;
+}
+.info h2{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+.container section .info section p b {
+    text-transform: uppercase;
+}
+footer {
+    display: flex;
+    margin: 30px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    background-color: var(--bg-color);
+    padding: 20px;
+}
+.container section .info section p {
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-wrap: wrap;
+    width: 243px;
+    height: 47px;
+}
+.price h2{
+    color: var(--btn-color);
+}
+footer button {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    width: 80%;
+    background-color: var(--btn-color);
+    color: var(--bg-color);
+    border: none;
+    outline: none;
+    justify-content: center;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: var(--border-radius);
+    transition: var(--timming);
+
+}
+
+.container section img {
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (max-width: 767px) {
+    .container > section {
+        flex-direction: column;
+        height: fit-content;
+    }
+    img{
+        width: 100%;
+        
+    }
+    .container {
+        transform: translateY(10%);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        margin: 0px 20px;
+    }
+    .container section .m-img img{
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+    }
+    footer button {
+        width: 100%;
+        font-size: 1.3rem;
+        padding: 15px 30px;
+    }
+    .price{
+        justify-content: flex-start;
+    }
+}
